@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Memory color</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #play-retry{
+            color: rgb(0, 237, 0);
+        }
+
+        .bottoni{
+            width: 40%;
+            padding: 48px 0;
+            background-color: rgb(58, 58, 58);
+            text-align: center;
+            border-radius: 20px;
+            font-size: 40px;
+            margin: 7.5% auto;
+            cursor: pointer;
+            transition: all ease 0.2s;
+        }
+
+        .facile{
+            color: greenyellow;
+        }
+
+        .medio{
+            color: yellow;
+        }
+
+        .difficile{
+            color: red;
+        }
+
+        .impossibile{
+            color: rgb(255, 0, 255);
+        }
+
+        .dio{
+            color: rgb(0, 0, 0);
+        }
+
+        .bottoni:hover{
+            transform: scale(1.25);
+        }
+
+        #container-colori{
+            margin: 100px 0;
+        }
+        
+        .container-colori-facile, .container-colori-medio, .container-colori-difficile, .container-colori-difficile-p{
+            gap: 40px;
+        }
+
+        .container-colori-facile{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        .container-colori-medio{
+            grid-template-columns: repeat(3,1fr);
+        }
+        
+        .container-colori-difficile-p, #container-colori-utente{
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        .colore{
+            cursor: pointer;
+            height: 70px;
+            width: 70px;
+            padding: 40px;
+            border: solid 2px black;
+            border-radius: 999px;
+            text-align: center;
+            font-size: 60px;
+            margin: auto;
+        }
+
+        .bianco{
+            background-color: white;
+            color: black;
+        }
+
+        .rosa{
+            background-color: pink;
+        }
+
+        .rosso{
+            background-color: red;
+        }
+
+        .arancione{
+            background-color: orange;
+        }
+
+        .giallo{
+            background-color: yellow;
+            color: black;
+        }
+
+        .verde{
+            background-color: green;
+        }
+
+        .azzurro{
+            background-color: lightblue;
+        }
+
+        .blu{
+            background-color: blue;
+        }
+
+        .viola{
+            background-color: purple;
+        }
+
+        .nero{
+            background-color: black;
+            color: white;
+        }
+
+        .colors-notHidden{
+            display: grid;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        div{
+            color:white;
+        }
+
+        #difficolta{
+            margin-bottom: 75px;
+        }
+
+        .user-colors{
+            margin-top: 40px;
+        }
+
+        .perso{
+            color: red;
+        }
+
+        .vinto{
+            color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title-game" class="undertale">Memory Color</h1>
+        <h1 class="undertale">Difficolta': <span id="difficolta"></span></h1>
+        <h1 id="partita_VS" class="undertale"></h1>
+        <h2 id="warningMessage" class="undertale hidden" style="font-size: 42px;">MEMORIZZA I COLORI!</h2>
+        <h2 id="timer" class="undertale hidden"></h2>
+        <h2 id="score" class="undertale hidden"></h2>
+    </header>
+    <main>
+        <div id="play-retry" class="undertale bottoni">Play</div>
+        <div id="container-colori" class="hidden"></div>
+        <div id="container-colori-utente" class="hidden">
+            <div class="user-colors colore bianco"></div>
+            <div class="user-colors colore rosa"></div>
+            <div class="user-colors colore rosso"></div>
+            <div class="user-colors colore arancione"></div>
+            <div class="user-colors colore giallo"></div>
+            <div class="user-colors colore verde"></div>
+            <div class="user-colors colore azzurro"></div>
+            <div class="user-colors colore blu"></div>
+            <div class="user-colors colore viola"></div>
+            <div class="user-colors colore nero"></div>
+        </div>
+        <div id="back" class="undertale bottoni">Back</div>
+    </main>
+    <script src="game.js"></script>
+</body>
+</html>
+
