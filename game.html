@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,14 +149,43 @@
             color: greenyellow;
         }
 
+        #warningMessage{
+            font-size: 42px;
+        }
+
+        #diff{
+            font-size: 40px;
+        }
+
+        @media (max-width: 700px) {
+            #warningMessage{
+                font-size: 30px;
+            }
+
+            #diff{
+                font-size: 30px;
+            }
+
+            .bottoni{
+                font-size: 30px;
+                padding: 24px 0
+            }
+
+            .colore{
+                height: 35px;
+                width: 35px;
+                padding: 20px;
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 id="title-game" class="undertale">Memory Color</h1>
-        <h1 class="undertale">Difficolta': <span id="difficolta"></span></h1>
+        <h1 id="diff" class="undertale">Difficolta': <span id="difficolta"></span></h1>
         <h1 id="partita_VS" class="undertale"></h1>
-        <h2 id="warningMessage" class="undertale hidden" style="font-size: 42px;">MEMORIZZA I COLORI!</h2>
+        <h2 id="warningMessage" class="undertale hidden">MEMORIZZA I COLORI!</h2>
         <h2 id="timer" class="undertale hidden"></h2>
         <h2 id="score" class="undertale hidden"></h2>
     </header>

@@ -28,10 +28,17 @@ header{
     text-align: center;
     margin: 100px;
     font-size: 64px;
+    margin: 40% auto;
 }
 
 .undertale{
     font-family: 'UndertaleFont';
     color: white;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    #title-game{
+        font-size: 40px;
+    }
 }

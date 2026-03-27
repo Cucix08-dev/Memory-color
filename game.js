@@ -44,6 +44,7 @@ const partitaVS = document.getElementById("partita_VS");
 
 playRetry.addEventListener("click", () => {
     iter = 0;
+    sequenzaColori = [];
     let colorsN = Math.ceil(Math.random() * difficolta) + difficolta;
     playRetry.classList.add("hidden");
     timer.classList.remove("hidden")
